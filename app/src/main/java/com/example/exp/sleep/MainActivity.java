@@ -3,6 +3,7 @@ package com.example.exp.sleep;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
@@ -121,8 +122,9 @@ public class MainActivity extends AppCompatActivity {
             Log.i("login", "Login: succeed");
             new AlertDialog.Builder(this).setTitle("Succeed").setMessage("Login succeed").setPositiveButton("ok", null).show();
             SavePassword();
+            startActivity(new Intent(this,HomePageActivity.class));
             return;
-    }
+         }
         else {
             Log.i("login", "Login: fail");
             new AlertDialog.Builder(this).setTitle("Failed").setMessage("Password wrong").setPositiveButton("ok", null).show();

@@ -37,7 +37,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="#c0005eff"
-        android:onClick="BtnChooseTimeClick"
         android:text="Choose"
         android:textColor="#ffffff"
         android:textStyle="bold"

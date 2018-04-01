@@ -1,5 +1,12 @@
 package com.example.exp.sleep;
 
+/**
+ * This class Extract the noiseModel three features : RMS,RLH,VAR
+ * RLH means ratio of low frequency to high frequency
+ * RMS means the root mean square
+ * VAR means the volume variance of the frame
+ */
+
 public class FeatureExtractor {
 
     private NoiseModel noiseModel;
@@ -11,7 +18,9 @@ public class FeatureExtractor {
         this.noiseModel = noiseModel;
     }
 
-    public void update(short[] buffer) {
+    public void
+
+     update(short[] buffer) {
         lowFreq = new float[buffer.length];
         highFreq = new float[buffer.length];
         noiseModel.addRLH(calculateRLH(buffer));

@@ -46,8 +46,8 @@ public class AudioView extends View implements TestView {
         paint.setColor(Color.BLACK);
         paint.setStrokeWidth(1);
         paint.setStyle(Paint.Style.STROKE);
-        paint.setStyle(Paint.Style.FILL);
         paint.setTextSize(80);
+
         points = new ArrayList<>();
         points2 = new ArrayList<>();
         rlh = new ArrayList<>();

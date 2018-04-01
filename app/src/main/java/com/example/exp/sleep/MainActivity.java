@@ -106,7 +106,18 @@ public class MainActivity extends AppCompatActivity {
         String[] username={""};
         EditText et_UserName=(EditText)findViewById(R.id.et_UserName);
         EditText et_Password=(EditText)findViewById(R.id.et_Password);
+
         username[0]=et_UserName.getText().toString();
+        if(username[0].isEmpty()){
+            Log.i("login", "Empty text");
+            new AlertDialog.Builder(this).setTitle(null).setMessage("UserName is empty, please check").setPositiveButton("ok", null).show();
+            return;
+        }
+        if(et_Password.getText().toString().isEmpty()){
+            Log.i("login", "Empty text2");
+            new AlertDialog.Builder(this).setTitle(null).setMessage("Password is empty, please check").setPositiveButton("ok", null).show();
+            return;
+        }
         Cursor cursor=db.query(OrderDBHelper.TABLE_NAME,new String[]{"Password"},"UserName = ?",username,null,null,null);
 
         int count=cursor.getCount();

@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_dark">
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:text="Nice Waker"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="300dp"
@@ -13,6 +26,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="200dp"
+        android:background="@drawable/text_shape"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,6 +36,7 @@
             android:id="@+id/tv_UserName2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="UserName" />
 
@@ -29,6 +44,7 @@
             android:id="@+id/et_UserName2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
@@ -42,6 +58,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="300dp"
+        android:background="@drawable/text_shape"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,6 +68,7 @@
             android:id="@+id/tv_Password2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="Password" />
 
@@ -58,6 +76,7 @@
             android:id="@+id/et_Password2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
@@ -66,14 +85,15 @@
 
     <Button
         android:id="@+id/bt_Register2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="204dp"
+        android:layout_height="34dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
-        android:background="@android:color/holo_blue_bright"
+        android:background="@drawable/button_login_selector"
         android:onClick="Register2"
         android:text="Register"
+        android:textColor="@android:color/background_light"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,12 +114,11 @@
         android:id="@+id/bt_back_reg"
         android:layout_width="60dp"
         android:layout_height="18dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="14dp"
-        android:background="@android:color/holo_green_dark"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/button_login_selector"
         android:onClick="Back2"
         android:text="Back"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="@android:color/background_light"
         android:textSize="10sp"
         app:layout_constraintStart_toEndOf="@+id/bt_Register2"
         app:layout_constraintTop_toBottomOf="@+id/bt_Register2" />

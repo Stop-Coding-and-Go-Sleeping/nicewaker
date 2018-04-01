@@ -27,7 +27,7 @@ import java.io.OutputStreamWriter;
 public class MainActivity extends AppCompatActivity {
 
     private static  OrderDBHelper ordersDBHelper ;
-    private int boxSel;  //本来想用boolean  但是写入不行
+    //private int boxSel;  //本来想用boolean  但是写入不行
     public CheckBox cb_Remember;//=(CheckBox)findViewById(R.id.cb_remember);
     public EditText et_UserName;//=(EditText)findViewById(R.id.et_UserName);
     public EditText et_Password;//=(EditText)findViewById(R.id.et_Password);
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         try{
             out = openFileOutput("sets",Context.MODE_PRIVATE);
             writer = new BufferedWriter(new OutputStreamWriter(out));
+            int boxSel=cb_Remember.isChecked()?1:0;
             writer.write(boxSel);
             if(boxSel==1){
                 writer.newLine();
@@ -78,12 +79,12 @@ public class MainActivity extends AppCompatActivity {
                 et_UserName.setText(str);
                 str=reader.readLine();
                 et_Password.setText(str);
-                boxSel=1;
+                //boxSel=1;
 
             }
             else {
                 cb_Remember.setChecked(false);
-                boxSel=0;
+               //boxSel=0;
             }
 
         }catch (IOException e){
@@ -107,7 +108,18 @@ public class MainActivity extends AppCompatActivity {
         String[] username={""};
         EditText et_UserName=(EditText)findViewById(R.id.et_UserName);
         EditText et_Password=(EditText)findViewById(R.id.et_Password);
+
         username[0]=et_UserName.getText().toString();
+        if(username[0].length()==0){
+            Log.i("login", "Empty text");
+            new AlertDialog.Builder(this).setTitle(null).setMessage("UserName is empty, please check").setPositiveButton("ok", null).show();
+            return;
+        }
+        if(et_Password.getText().toString().length()==0){
+            Log.i("login", "Empty text2");
+            new AlertDialog.Builder(this).setTitle(null).setMessage("Password is empty, please check").setPositiveButton("ok", null).show();
+            return;
+        }
         Cursor cursor=db.query(OrderDBHelper.TABLE_NAME,new String[]{"Password"},"UserName = ?",username,null,null,null);
 
         int count=cursor.getCount();
@@ -123,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
             new AlertDialog.Builder(this).setTitle("Succeed").setMessage("Login succeed").setPositiveButton("ok", null).show();
             SavePassword();
             startActivity(new Intent(this,HomePageActivity.class));
+            finish();
             return;
          }
         else {
@@ -179,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
     public void RememberPassword(View view){
-
+/*
         if(cb_Remember.isChecked()){
             cb_Remember.setChecked(false);
             boxSel=0;
@@ -188,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
             cb_Remember.setChecked(true);
             boxSel=1;
         }
-
+*/
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

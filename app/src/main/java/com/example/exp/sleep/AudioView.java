@@ -10,6 +10,11 @@ import android.view.View;
 
 import java.util.ArrayList;
 
+/**
+ * This class  is a view to show the graph of user's sleep
+ */
+
+
 public class AudioView extends View implements TestView {
     Paint paint;
     ArrayList<Double> points = null;

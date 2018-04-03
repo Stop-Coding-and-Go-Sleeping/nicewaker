@@ -4,7 +4,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-public class AudioTester extends AppCompatActivity {
+/**
+ *  This class is aim to show the data of the user's sleep
+ */
+
+public class AudioTestAcitivity extends AppCompatActivity {
     AudioView testView;
 
     @Override

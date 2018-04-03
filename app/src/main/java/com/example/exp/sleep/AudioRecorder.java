@@ -22,9 +22,7 @@ public class AudioRecorder extends Thread {
 
     @Override
     public void run() {
-
         capture();
-
     }
 
     private void capture() {

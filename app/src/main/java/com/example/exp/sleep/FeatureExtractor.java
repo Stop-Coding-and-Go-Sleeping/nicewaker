@@ -14,7 +14,6 @@ public class FeatureExtractor {
     private float[] highFreq;
 
     public FeatureExtractor(NoiseModel noiseModel) {
-
         this.noiseModel = noiseModel;
     }
 

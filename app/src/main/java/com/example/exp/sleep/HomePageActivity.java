@@ -63,6 +63,7 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            // begin to sleep
             case R.id.btn_sleep:
                 HomePageActivity.this.startActivity(new Intent(HomePageActivity.this, AudioTestAcitivity.class));
                 mAlarmManager.set(AlarmManager.RTC_WAKEUP, mCalendar.getTimeInMillis(), mPendingIntent);
@@ -78,11 +79,11 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
                                 mCalendar = Calendar.getInstance(Locale.CHINA);
                                 mCalendar.setTimeInMillis(System.currentTimeMillis());
 
-                                // Set the
+                                // Set the Current time
                                 mCalendar.set(Calendar.HOUR_OF_DAY,hourOfDay);
                                 mCalendar.set(Calendar.MINUTE,minute);
 
-                                // 提示闹钟设置完毕:
+                                // make to toast to infrom user that alarm have been set.
                                 Toast.makeText(HomePageActivity.this, mCalendar.get(Calendar.HOUR_OF_DAY) + ":" +
                                                 mCalendar.get(Calendar.MINUTE),
                                         Toast.LENGTH_SHORT).show();
@@ -90,7 +91,5 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
                         }, currentTime.get(Calendar.HOUR_OF_DAY), currentTime
                         .get(Calendar.MINUTE), false).show();
         }
-
-
     }
 }

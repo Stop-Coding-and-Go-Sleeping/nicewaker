@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 /**
  * This class  is a view to show the graph of user's sleep
+ * it contains several ArrayList to save the data and three features.
  */
 
 
@@ -65,14 +66,6 @@ public class AudioView extends View implements TestView {
         recorder = new AudioRecorder(noiseModel,this);
         recorder.start();
     }
-
-    public void addPoint(Double point) {
-        if(points.size() > 10) {
-            points.remove(0);
-        }
-        points.add(point);
-    }
-
 
     public void addPoint2(Double x, Double y) {
         if(points2.size() > 10) {

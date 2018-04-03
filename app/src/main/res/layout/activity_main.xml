@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomePageActivity"
+    android:background="@drawable/background"
     tools:layout_editor_absoluteY="81dp">
 
 
@@ -16,7 +17,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#c0005eff"
+        android:background="@drawable/button_login_selector"
         android:text="sleep"
         android:textColor="#ffffff"
         android:textStyle="bold"
@@ -36,7 +37,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#c0005eff"
+        android:background="@drawable/button_login_selector"
         android:text="Choose"
         android:textColor="#ffffff"
         android:textStyle="bold"
@@ -75,10 +76,10 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.134"
+        app:layout_constraintVertical_bias="0.132"
         app:srcCompat="@drawable/back2" />
 
     <android.support.constraint.Guideline

@@ -5,6 +5,10 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * this class contains three feature to analysis the sleep condition
+ */
+
 public class NoiseModel {
     private List<Double> RMS;
     private List<Double> RLH;
@@ -64,13 +68,14 @@ public class NoiseModel {
         if(VAR.size() <= 1) return 0d;
         return VAR.get(VAR.size()-1);
     }
+
     public double getLastRLH() {
         if(RLH.size() <= 1) return 0d;
         return RLH.get(RLH.size()-1);
     }
 
     /**
-     * This detects which event occured in the current frame
+     * This detects which event occured in the current time
      */
     public void calculateFrame() {
         /*if(getNormalizedVAR() > 1) { // Filter noise

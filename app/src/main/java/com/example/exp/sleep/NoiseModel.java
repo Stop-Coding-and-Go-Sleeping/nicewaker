@@ -75,7 +75,7 @@ public class NoiseModel {
     }
 
     /**
-     * This detects which event occured in the current time
+     * Detects which event occurred in the current time
      */
     public void calculateFrame() {
         /*if(getNormalizedVAR() > 1) { // Filter noise

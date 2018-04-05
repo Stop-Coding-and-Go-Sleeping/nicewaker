@@ -1,7 +1,7 @@
 package com.example.exp.sleep;
 
 /**
- * This class Extract the noiseModel three features : RMS,RLH,VAR
+ * Extracts the noiseModel three features : RMS,RLH,VAR
  * RLH means ratio of low frequency to high frequency
  * RMS means the root mean square
  * VAR means the volume variance of the frame

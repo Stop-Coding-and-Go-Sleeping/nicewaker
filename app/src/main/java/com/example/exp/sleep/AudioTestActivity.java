@@ -5,11 +5,11 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 /**
- *  This class is aim to show the data of the user's sleep
- *  it contains a testView which show the graph of user' sleep dynamically.
+ * Aims to show the data of the user's sleep
+ * Has a testView which shows the graph of user' sleep dynamically.
  */
 
-public class AudioTestAcitivity extends AppCompatActivity {
+public class AudioTestActivity extends AppCompatActivity {
     AudioView testView;
 
     @Override

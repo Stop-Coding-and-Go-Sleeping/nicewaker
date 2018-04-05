@@ -9,7 +9,6 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -65,7 +64,7 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
         switch (v.getId()){
             // begin to sleep
             case R.id.btn_sleep:
-                HomePageActivity.this.startActivity(new Intent(HomePageActivity.this, AudioTestAcitivity.class));
+                HomePageActivity.this.startActivity(new Intent(HomePageActivity.this, AudioTestActivity.class));
                 mAlarmManager.set(AlarmManager.RTC_WAKEUP, mCalendar.getTimeInMillis(), mPendingIntent);
                 break;
             case R.id.btn_choose_earlist_time2:

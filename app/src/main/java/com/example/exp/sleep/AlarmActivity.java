@@ -4,29 +4,25 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 
 public class AlarmActivity extends AppCompatActivity {
     private MediaPlayer mMediaPlayer;
 
     @Override
     protected void onDestroy() {
-        Log.d("AlarmActivity","onDestory");
+        Log.d("AlarmActivity", "onDestory");
         super.onDestroy();
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("AlarmActivity","onCreate");
+        Log.d("AlarmActivity", "onCreate");
         setContentView(R.layout.activity_alarm);
 
-        mMediaPlayer = MediaPlayer.create(this,R.raw.dream);
+        mMediaPlayer = MediaPlayer.create(this, R.raw.dream);
         mMediaPlayer.start();
 
         //创建一个闹钟提醒的对话框,点击确定关闭铃声与页面
